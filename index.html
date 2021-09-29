@@ -3,7 +3,6 @@
 <head>
   <title>Parallax Template - TODO: responsive design needed</title>
   <link rel="stylesheet" type="text/css" href="./index.css" />
-
 </head>
 
 <body>
@@ -12,7 +11,7 @@
     <ul class="navbar-container">
       <li><a href="#" class="left-underline nav-button brand-logo">TODO: App Name</a></li>
       <li><input type="text" placeholder="Search.. TODO: CSS"></li>
-      <li class="nav-item"><a href="#section-3" class="left-underline nav-button" data-scroll>TODO: Register</a></li>
+      <li class="nav-item"><a href="register.html" class="left-underline nav-button" data-scroll>Register</a></li>
       <li class="nav-item"><a href="#section-2" class="left-underline nav-button" data-scroll>Profile</a></li>
       <li class="nav-item active"><a href="#section-1" class="left-underline nav-button" data-scroll>Home</a></li>
     </ul>
@@ -70,19 +69,73 @@
       <p>Reviews</p>
     </div>
   </div>
-  <div class="parallax p2" id="section-2">
-    <hgroup>
-      <h1>TODO:</h1>
-      <h2>Object submission form page</h2>
-    </hgroup>
+  <div class="row" id="section-2">
+    <form>
+        <label for="object-name">Name:</label>
+        <input type="text" placeholder="Object name" name="object-name" id="object-name" required>
+      </br>
+
+        <label for="object-description">Description:</label>
+        <input type="text" name="object-description" id="object-description" required>
+      </br>
+
+        <label for="object-lat">Latitude:</label>
+        <input type="text" name="object-lat" id="object-lat" required>
+      </br>
+        <label for="object-long">Longitude:</label>
+        <input type="text" name="object-long" id="object-long" required>
+      </br>
+
+        <label for="object-picture">Upload image:</label>
+        <input type="file" name="object-picture" id="object-picture" accept="image/*" required>
+      </br>
+
+    <button>Add new object</button>
+    </form>
   </div>
 
   <footer>
-    <div class="row" id="section-3">
+    <div class="row" id="registration-page">
       <div class="col-3">
-        <p>TODO: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum interdum tortor ac dui malesuada, id
-          molestie elit aliquam. Fusce laoreet nisl id tellus molestie mattis. Fusce vitae ante quis augue imperdiet
-          rutrum a vitae purus. Etiam tincidunt enim id turpis varius, in condimentum elit.</p>
+        <form>
+          <h1>Register your account.</h1>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email" name="email" id="email" required>
+          </br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+          </br>
+
+            <label for="confirm-password">Confirm password:</label>
+            <input type="password" name="confirm-password" id="confirm-pw" required>
+          </br>
+
+            <label for="first-name">First name:</label>
+            <input type="text" name="first-name" id="first-name" required>
+          </br>
+
+            <label for="last-name">Last name:</label>
+            <input type="text" name="last-name" id="last-name" required>
+          </br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="Male">Male</input>
+            <input type="radio" name="gender" value="Female">Female</input>
+            <input type="radio" name="gender" value="Other">Other</input>
+          </br>
+
+            <p>By creating an account you agree to our <a href="#">Terms of Service & Privacy Policy</a></p>
+            <input type="checkbox" name="agree-terms" id="agree-terms" required>
+            <label for="agree-terms">I agree to the Terms of Service</label>
+          </br>
+
+            <input type="checkbox" name="agree-privacy" id="agree-privacy" required>
+            <label for="agree-privacy">I agree to the Privacy Policy</label>
+          </br>
+        <button>Register</button>
+
+        </form>
       </div>
     </div>
     <div class="footer-copyright">
