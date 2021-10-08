@@ -198,6 +198,10 @@ footer p {
 	margin-top: 1%;
 }
 
+.center-video {
+	text-align: center;
+}
+
 .center-block {
 	margin: auto;
 	width: 50%;
