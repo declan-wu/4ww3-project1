@@ -1,149 +1,169 @@
 <html>
 
 <head>
-  <title>Parallax Template - TODO: responsive design needed</title>
+  <title>Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./index.css" />
 </head>
 
 <body>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-  <div class="navbar">
-    <ul class="navbar-container">
-      <li><a href="#" class="left-underline nav-button brand-logo">TODO: App Name</a></li>
-      <li><input type="text" placeholder="Search.. TODO: CSS"></li>
-      <li class="nav-item"><a href="register.html" class="left-underline nav-button" data-scroll>Register</a></li>
-      <li class="nav-item"><a href="#section-2" class="left-underline nav-button" data-scroll>Profile</a></li>
-      <li class="nav-item active"><a href="#section-1" class="left-underline nav-button" data-scroll>Home</a></li>
-    </ul>
-  </div>
-  <div class="parallax p1" id="section-1">
-    <hgroup>
-      <h1>I'm a map :)</h1>
-      <h2>Below is "result page" showing all individual objects</h2>
-    </hgroup>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <h1><a href="#restaurant-1">Restaurant 1</a></h1>
-      <h2>^^^TODO: individual object page</h2>
-      <p>Picture 1</p>
-      <p>Ratings</p>
-      <p>Description</p>
-      <p>Reviews: TODO: maybe somehow add check boxes here</p>
-    </div>
-    <div class="col-3">
-      <h1><a href="#restaurant-1">Restaurant 2</a></h1>
-      <p>Picture 2</p>
-      <p>Ratings</p>
-      <p>Description</p>
-      <p>Reviews</p>
-    </div>
-    <div class="col-3">
-      <h1><a href="#restaurant-1">Restaurant 3</a></h1>
-      <p>Picture 3</p>
-      <p>Ratings</p>
-      <p>Description</p>
-      <p>Reviews</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <h1><a href="#restaurant-1">Restaurant 4</a></h1>
-      <p>Picture 4</p>
-      <p>Ratings</p>
-      <p>Description</p>
-      <p>Reviews</p>
-    </div>
-    <div class="col-3">
-      <h1><a href="#restaurant-1">Restaurant 5</a></h1>
-      <p>Picture 5</p>
-      <p>Ratings</p>
-      <p>Description</p>
-      <p>Reviews</p>
-    </div>
-    <div class="col-3">
-      <h1><a href="#restaurant-1">Restaurant 6</a></h1>
-      <p>Picture 6</p>
-      <p>Ratings</p>
-      <p>Description</p>
-      <p>Reviews</p>
-    </div>
-  </div>
-  <div class="row" id="section-2">
-    <form>
-        <label for="object-name">Name:</label>
-        <input type="text" placeholder="Object name" name="object-name" id="object-name" required>
-      </br>
 
-        <label for="object-description">Description:</label>
-        <input type="text" name="object-description" id="object-description" required>
-      </br>
-
-        <label for="object-lat">Latitude:</label>
-        <input type="text" name="object-lat" id="object-lat" required>
-      </br>
-        <label for="object-long">Longitude:</label>
-        <input type="text" name="object-long" id="object-long" required>
-      </br>
-
-        <label for="object-picture">Upload image:</label>
-        <input type="file" name="object-picture" id="object-picture" accept="image/*" required>
-      </br>
-
-    <button>Add new object</button>
-    </form>
-  </div>
-
-  <footer>
-    <div class="row" id="registration-page">
-      <div class="col-3">
-        <form>
-          <h1>Register your account.</h1>
-            <label for="email">Email:</label>
-            <input type="email" placeholder="Email" name="email" id="email" required>
-          </br>
-
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-          </br>
-
-            <label for="confirm-password">Confirm password:</label>
-            <input type="password" name="confirm-password" id="confirm-pw" required>
-          </br>
-
-            <label for="first-name">First name:</label>
-            <input type="text" name="first-name" id="first-name" required>
-          </br>
-
-            <label for="last-name">Last name:</label>
-            <input type="text" name="last-name" id="last-name" required>
-          </br>
-
-            <label for="gender">Gender:</label>
-            <input type="radio" name="gender" value="Male">Male</input>
-            <input type="radio" name="gender" value="Female">Female</input>
-            <input type="radio" name="gender" value="Other">Other</input>
-          </br>
-
-            <p>By creating an account you agree to our <a href="#">Terms of Service & Privacy Policy</a></p>
-            <input type="checkbox" name="agree-terms" id="agree-terms" required>
-            <label for="agree-terms">I agree to the Terms of Service</label>
-          </br>
-
-            <input type="checkbox" name="agree-privacy" id="agree-privacy" required>
-            <label for="agree-privacy">I agree to the Privacy Policy</label>
-          </br>
-        <button>Register</button>
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navigation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Map</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2021 TODO: our project name, All rights reserved.
+  </nav>
+
+  <img src="./map.jpg" class="rounded mx-auto d-block" alt="Map of Individual Object" style="max-width:80%; height:50%; width: 80%">
+
+  <div class="container">
+    <div class="row">
+      <div class="col card" style="width: 18rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-suit-diamond-fill card-img-top"
+          viewBox="0 0 16 16">
+          <path
+            d="M2.45 7.4 7.2 1.067a1 1 0 0 1 1.6 0L13.55 7.4a1 1 0 0 1 0 1.2L8.8 14.933a1 1 0 0 1-1.6 0L2.45 8.6a1 1 0 0 1 0-1.2z" />
+        </svg>
+        <div class="card-body">
+          <h5 class="card-title">Individual Object</h5>
+          <p class="card-text">Some quick description.</p>
+          <a href="./individual-object.html" class="btn btn-primary">Go to object page!</a>
+        </div>
+      </div>
+      <div class="col card" style="width: 18rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="card-img-top bi bi-suit-heart-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+        </svg>
+        <div class="card-body">
+          <h5 class="card-title">Individual Object</h5>
+          <p class="card-text">Some quick description.</p>
+          <a href="./individual-object.html" class="btn btn-primary">Go to object page!</a>
+        </div>
+      </div>
+      <div class="col card" style="width: 18rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="card-img-top bi bi-suit-club-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.5 12.5a3.493 3.493 0 0 1-2.684-1.254 19.92 19.92 0 0 0 1.582 2.907c.231.35-.02.847-.438.847H6.04c-.419 0-.67-.497-.438-.847a19.919 19.919 0 0 0 1.582-2.907 3.5 3.5 0 1 1-2.538-5.743 3.5 3.5 0 1 1 6.708 0A3.5 3.5 0 1 1 11.5 12.5z" />
+        </svg>
+        <div class="card-body">
+          <h5 class="card-title">Individual Object</h5>
+          <p class="card-text">Some quick description.</p>
+          <a href="./individual-object.html" class="btn btn-primary">Go to object page!</a>
+        </div>
+        
+      </div>
+      <div class="col card" style="width: 18rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+          class="card-img-top bi bi-suit-spade-fill" viewBox="0 0 16 16">
+          <path
+            d="M7.184 11.246A3.5 3.5 0 0 1 1 9c0-1.602 1.14-2.633 2.66-4.008C4.986 3.792 6.602 2.33 8 0c1.398 2.33 3.014 3.792 4.34 4.992C13.86 6.367 15 7.398 15 9a3.5 3.5 0 0 1-6.184 2.246 19.92 19.92 0 0 0 1.582 2.907c.231.35-.02.847-.438.847H6.04c-.419 0-.67-.497-.438-.847a19.919 19.919 0 0 0 1.582-2.907z" />
+        </svg>
+        <div class="card-body">
+          <h5 class="card-title">Individual Object</h5>
+          <p class="card-text">Some quick description.</p>
+          <a href="./individual-object.html" class="btn btn-primary">Go to object page!</a>
+        </div>
       </div>
     </div>
-  </footer>
+
+    <div class="row">
+      <div class="col card">
+        <form>
+          <legend>Submit New Object</legend>
+          <div class="mb-3">
+            <label for="object-name" class="form-label">Name:</label>
+            <input type="text" placeholder="Object name" name="object-name" id="object-name" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="object-description" class="form-label">Description:</label>
+            <input type="text" name="object-description" id="object-description" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="object-lat" class="form-label">Latitude:</label>
+            <input type="text" name="object-lat" id="object-lat" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="object-long" class="form-label">Longitude:</label>
+            <input type="text" name="object-long" id="object-long" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="object-picture" class="form-label">Upload image:</label>
+            <input type="file" name="object-picture" id="object-picture" accept="image/*" required>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Submit new object</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="footer-dark">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 item">
+            <h3>Reviews</h3>
+            <ul>
+              <li><a href="#">Web design</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">Hosting</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 item text">
+            <h3>Company Name</h3>
+            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
+              elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+          </div>
+  
+          <p class="copyright">© 2021 TODO: our project name, All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+  
 </body>
 
 </html>

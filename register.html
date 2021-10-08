@@ -1,0 +1,119 @@
+<html>
+
+<head>
+  <title>Individual Object Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navigation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./register.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Map</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row" id="registration-page">
+    <div class="col-3 center-block">
+      <form>
+        <h1>Register your account.</h1>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Email" name="email" id="email" required>
+        </br>
+  
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        </br>
+  
+        <label for="confirm-password">Confirm password:</label>
+        <input type="password" name="confirm-password" id="confirm-pw" required>
+        </br>
+  
+        <label for="first-name">First name:</label>
+        <input type="text" name="first-name" id="first-name" required>
+        </br>
+  
+        <label for="last-name">Last name:</label>
+        <input type="text" name="last-name" id="last-name" required>
+        </br>
+  
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male">Male</input>
+        <input type="radio" name="gender" value="Female">Female</input>
+        <input type="radio" name="gender" value="Other">Other</input>
+        </br>
+  
+        <p>By creating an account you agree to our <a href="#">Terms of Service & Privacy Policy</a></p>
+        <input type="checkbox" name="agree-terms" id="agree-terms" required>
+        <label for="agree-terms">I agree to the Terms of Service</label>
+        </br>
+  
+        <input type="checkbox" name="agree-privacy" id="agree-privacy" required>
+        <label for="agree-privacy">I agree to the Privacy Policy</label>
+        </br>
+        <button>Register</button>
+  
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-dark">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 item">
+            <h3>Reviews</h3>
+            <ul>
+              <li><a href="#">Web design</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">Hosting</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 item text">
+            <h3>Company Name</h3>
+            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
+              elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+          </div>
+
+          <p class="copyright">© 2021 TODO: our project name, All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
