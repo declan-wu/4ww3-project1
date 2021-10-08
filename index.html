@@ -32,9 +32,35 @@
             <a class="nav-link disabled">Map</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="form-inline pull-right">
+          <div class="input-group">
+            <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </div>
+          <div class="input-group">
+            <!-- Temporarily commenting this out because we don't have any JavaScript to make our dropdown responsive. Will use in next iteration -->
+            <!-- <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="ratingDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Search by Rating
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="dropdown-item" value="one-star" type="button">1/5</button>
+                <button class="dropdown-item" value="one-star" type="button">1/5</button>
+                <button class="dropdown-item" value="one-star" type="button">1/5</button>
+              </div>
+            </div>
+            <div class="dropdown"> -->
+              <select name="search-rating" id="search-rating">
+                <option value="" disabled selected>Search by Rating</option>
+                <option value="one-star">1/5</option>
+                <option value="two-star">2/5</option>
+                <option value="three-star">3/5</option>
+                <option value="four-star">4/5</option>
+                <option value="five-star">5/5</option>
+              </select>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
