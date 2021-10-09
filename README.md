@@ -10,6 +10,7 @@ Please see 3.23.48.49 to view the site.
 
 Here is our GitHub repo: https://github.com/declan-wu/4ww3-project1
 
+On mobile, the navigation bar collapses to a hamburger menu. However, when you click on it, nothing happens because we do not have any JavaScript enabled yet; hopefully this is not a problem. Once we're allowed to use JavaScript, the menu will become clickable to show the navigation bar.
 
 ## Add-On 2
 i. Navigation bar logo HTML code sample:
