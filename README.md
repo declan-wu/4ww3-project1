@@ -1,4 +1,15 @@
 # 4ww3-project1
+## Group Members
+Jennifer Cheng - 400118301 - chengj43
+Song Tao (Declan) Wu - 400132033 - wus92
+
+## Notes to Marker
+We used Bootstrap, but otherwise everything is plain HTML/CSS.
+
+Please see 3.23.48.49 to view the site.
+
+Here is our GitHub repo: https://github.com/declan-wu/4ww3-project1
+
 
 ## Add-On 2
 i. Navigation bar logo HTML code sample:
