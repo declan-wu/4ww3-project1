@@ -26,10 +26,20 @@ function initMapIndividual() {
 
 // For sample results page
 function initMap() {
+  // Get lat and long from query string; if no query string, use default Toronto center
+  var latlong = { lat: 43.651, lng: -79.347 };
+
+  //https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  // If params has both lat and long
+  if (Object.keys(params).length === 2) {
+    latlong = { lat: parseFloat(params["lat"]), lng: parseFloat(params["long"]) };
+  }
   // Initialize our Google map
   map = new google.maps.Map(document.getElementById("map"), {
     // toronto center
-    center: { lat: 43.651, lng: -79.347 },
+    center: latlong,
     zoom: 14,
   });
 

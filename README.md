@@ -29,3 +29,6 @@ ii.
 
 
 iii. It is a relatively new feature so it's possible that some browsers do not yet support it. This is mitigated by using the `<img>` tag inside of the `<picture>` tag so it will always be backwards compatible.
+
+# NEW FOR PART 2
+Nothing to add, all features implemented as requested. Same URL as above to see the website.
