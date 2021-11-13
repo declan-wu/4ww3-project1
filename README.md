@@ -3,7 +3,15 @@
 Jennifer Cheng - 400118301 - chengj43
 Song Tao (Declan) Wu - 400132033 - wus92
 
-## Notes to Marker
+# NEW FOR PART 2 - NOTES TO MARKER
+**You must access the https server or else Google Maps API will not work**: Please go to here https://3.23.48.49/index.html
+
+It will say it is not secure - we will fix the SSL later (currently only using self-signed certificate) - functionality will be the same.
+
+You must turn off any AdBlocker or else some parts of the Google Maps API also doesn't work.
+
+
+## Notes to Marker (Part 1)
 We used Bootstrap, but otherwise everything is plain HTML/CSS.
 
 Please see 3.23.48.49 to view the site.
@@ -29,6 +37,3 @@ ii.
 
 
 iii. It is a relatively new feature so it's possible that some browsers do not yet support it. This is mitigated by using the `<img>` tag inside of the `<picture>` tag so it will always be backwards compatible.
-
-# NEW FOR PART 2
-Nothing to add, all features implemented as requested. Same URL as above to see the website.
