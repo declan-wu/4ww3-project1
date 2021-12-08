@@ -8,5 +8,5 @@ function getLocation() {
 
 function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
-    window.location.href = "results_sample.html?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
+    window.location.href = "results_page.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
 }

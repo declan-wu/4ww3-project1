@@ -61,7 +61,7 @@ function createMarker(pos, t) {
     'Object name' +
     '</br>' +
     'Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br>' + 
-    '<a href="./individual_sample.html" class="btn btn-primary">Go to object page!</a>' +
+    '<a href="./results_page.php" class="btn btn-primary">Go to object page!</a>' +
     "</div>";
 
   // Infowindow is used for popup upon click on marker

@@ -37,3 +37,7 @@ ii.
 
 
 iii. It is a relatively new feature so it's possible that some browsers do not yet support it. This is mitigated by using the `<img>` tag inside of the `<picture>` tag so it will always be backwards compatible.
+
+# Part 3
+## Notes and resources:
+- https://stackoverflow.com/questions/219569/best-database-field-type-for-a-url
