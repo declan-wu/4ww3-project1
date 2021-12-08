@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <html>
 
 <head>
@@ -8,20 +11,24 @@
 
 <body>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-  
+
   <!-- Header Include -->
   <?php include ("./includes/header.php")?>
 
   <!-- Container with form groups for registering -->
   <div class="container" id="registration-page">
-    <form onsubmit="return validate(this)" method="post">
+    
+    <!-- Display error message if registration failed earlier -->
+    <?php
+      $fail = (isset($_GET['fail']));
+      if ($fail == "true") {
+        echo "<h4 style='margin-top:1cm; color: red'> User with email already found. Please login or use a different email.</h3>";
+      }
+    ?>
+
+    <form onsubmit="return validate(this)" method="post" action="./php_helpers/register_verify.php">
       <h1>Register your account.</h1>
       <!-- Form group to put the label and input field together -->
-      <div class="form-group">
-        <label for="userid">User ID:</label>
-        <input type="text" class="form-control" name="userid" id="userid">
-      </div>
-
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" name="email" id="email">
@@ -69,7 +76,8 @@
       </div>
 
       <!-- Submit button to register -->
-      <input type="submit" value="Register" class="btn btn-primary"></input>
+      <input type="hidden" name="register_token" value="registertokentest1"/>
+      <button type="submit" value="Register" class="btn btn-primary">Register</button>
 
     </form>
   </div>

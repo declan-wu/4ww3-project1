@@ -30,8 +30,8 @@ $sql = "DROP TABLE IF EXISTS Reviews CASCADE;
             firstName VARCHAR(30) NOT NULL,
             lastName VARCHAR(30) NOT NULL,
             email VARCHAR(70) NOT NULL UNIQUE,
-            password VARCHAR(70) NOT NULL,
-            gender VARCHAR(30)
+            password VARCHAR(80),
+            gender VARCHAR(10)
         );
         CREATE TABLE Reviews (
             reviewId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

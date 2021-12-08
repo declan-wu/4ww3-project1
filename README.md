@@ -41,3 +41,4 @@ iii. It is a relatively new feature so it's possible that some browsers do not y
 # Part 3
 ## Notes and resources:
 - https://stackoverflow.com/questions/219569/best-database-field-type-for-a-url
+- http://jayblanchard.net/proper_password_hashing_with_PHP.html
