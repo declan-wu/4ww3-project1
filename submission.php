@@ -3,7 +3,7 @@
 ?>
 <html>
 <head>
-  <title>Submit new object</title>
+  <title>Submit New Restaurant</title>
   <?php include("./includes/head.php")?>
   <script type="text/javascript" src="./js/submission_location_helper.js"></script>
 </head>
@@ -15,10 +15,22 @@
   <?php include ("./includes/header.php")?>
 
   <div class="container mt-4 mb-4">
-    <form method="post" action="upload-to-s3.php" enctype="multipart/form-data">
-      <h1>Submit New Object.</h1>
+    <!-- Display message after submission if success or fail -->
+    <?php
+      if (isset($_GET['success'])) {
+        $success = $_GET['success'];
+        if ($success == "true") {
+          echo "<h4 style='margin-top:0.5cm; color: red'> Success! Restaurant has been submitted.</h3>";
+        } else {
+          echo "<h4 style='margin-top:0.5cm; color: red'> Error submitting restaurant, please try again.</h3>";
+        }
+      }
+    ?>
+
+    <form method="post" action="php_helpers/submit_object.php" enctype="multipart/form-data">
+      <h1>Submit New Restaurant.</h1>
       <div class="form-group">
-        <label for="object-name" class="form-label">Name:</label>
+        <label for="object-name" class="form-label">Restaurant Name:</label>
         <input type="text" class="form-control" placeholder="Object name" name="object-name" id="object-name" required>
       </div>
   
@@ -37,7 +49,7 @@
         <input type="number" min="-180" max="180" step="any" class="form-control" placeholder="Longitude" name="object-long" id="object-long" required>
       </div>
       
-      <button class="btn btn-primary" onclick="getLocation()">Use current location</button>
+      <button type="button" class="btn btn-primary" onclick="getLocation()">Use current location</button>
     
       <div class="form-group">
         <label for="object-picture" class="form-label">Upload image:</label>
@@ -49,7 +61,7 @@
         <input type="file" class="form-control" name="object-video" id="object-video" accept="video/*">
       </div>
     
-      <button type="submit" class="btn btn-primary mt-2">Submit new object</button>
+      <button type="submit" class="btn btn-primary mt-2">Submit new restaurant</button>
     </form>
   </div>
 
