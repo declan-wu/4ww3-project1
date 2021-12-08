@@ -15,7 +15,7 @@
   <?php include ("./includes/header.php")?>
 
   <div class="container mt-4 mb-4">
-    <form>
+    <form method="post" action="upload-to-s3.php" enctype="multipart/form-data">
       <h1>Submit New Object.</h1>
       <div class="form-group">
         <label for="object-name" class="form-label">Name:</label>

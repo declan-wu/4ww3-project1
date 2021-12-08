@@ -3,19 +3,6 @@
   
   include 'pdo_connect.php';
 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "mydb";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
-
-
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['register_token'])) {
       if (!empty($_POST['register_token'])) {
@@ -25,11 +12,6 @@
         $first_name = $_POST['first-name'];
         $last_name = $_POST['last-name'];
         $gender = $_POST['gender'];
-
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
 
         // Verify that user does not already exist
         $verify_query = 'SELECT * FROM `users` WHERE email=?';
@@ -49,6 +31,4 @@
       }
     }
   }
-
-$conn->close();
 ?>

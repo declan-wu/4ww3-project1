@@ -6,7 +6,7 @@ Song Tao (Declan) Wu - 400132033 - wus92
 # NEW FOR PART 2 - NOTES TO MARKER
 **You must access the https server or else Google Maps API will not work**: Please go to here https://3.23.48.49/index.html
 
-It will say it is not secure - we will fix the SSL later (currently only using self-signed certificate) - functionality will be the same.
+It will say it is not secure - currently only using self-signed certificate - functionality will be the same.
 
 You must turn off any AdBlocker or else some parts of the Google Maps API also doesn't work.
 
@@ -42,3 +42,7 @@ iii. It is a relatively new feature so it's possible that some browsers do not y
 ## Notes and resources:
 - https://stackoverflow.com/questions/219569/best-database-field-type-for-a-url
 - http://jayblanchard.net/proper_password_hashing_with_PHP.html
+- https://stackoverflow.com/questions/36893238/simple-sql-query-selecting-from-table-where-email-email
+- https://winscp.net/eng/docs/guide_amazon_ec2
+- https://www.tutsmake.com/how-to-install-phpmyadmin-amazon-ec2-ubuntu/
+- https://www.tutsmake.com/upload-file-to-aws-s3-bucket-in-php/
