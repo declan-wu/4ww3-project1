@@ -20,7 +20,8 @@
     <!-- Mask the background so the search bar is easier to see -->
     <div class="mask" style="background-color: rgba(0,0,0,0.7);">
       <!-- Justify search bars to center -->
-      <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="d-flex flex-column justify-content-center align-items-center h-100">
+        <h3 style="text-align: center; color: white">Restaurant Finder</h3>
         <form class="form-inline" action="results_page.php">
           <div class="input-group">
             <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">

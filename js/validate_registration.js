@@ -1,6 +1,5 @@
 // Validate form
 function validate(form) {
-  console.log(form["confirm-password"].value)
   // Check that fields are not empty
   // Double bang changes any type into a boolean, one more bang to negate it
   // Return false at the end of any condition so that the form does not submit

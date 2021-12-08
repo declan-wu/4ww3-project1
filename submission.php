@@ -14,9 +14,9 @@
   <!-- Header Include -->
   <?php include ("./includes/header.php")?>
 
-  <div class="container">
+  <div class="container mt-4 mb-4">
     <form>
-      <legend>Submit New Object</legend>
+      <h1>Submit New Object.</h1>
       <div class="form-group">
         <label for="object-name" class="form-label">Name:</label>
         <input type="text" class="form-control" placeholder="Object name" name="object-name" id="object-name" required>
@@ -49,7 +49,7 @@
         <input type="file" class="form-control" name="object-video" id="object-video" accept="video/*">
       </div>
     
-      <button type="submit" class="btn btn-primary">Submit new object</button>
+      <button type="submit" class="btn btn-primary mt-2">Submit new object</button>
     </form>
   </div>
 

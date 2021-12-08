@@ -1,4 +1,6 @@
 <?php
+// NOTE TO TA: This was taken as a helper method from http://jayblanchard.net/proper_password_hashing_with_PHP.html
+
 /*
  * name:        PDO Connect & Query
  * author:      Jay Blanchard

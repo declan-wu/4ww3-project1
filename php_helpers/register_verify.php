@@ -3,18 +3,18 @@
   
   include 'pdo_connect.php';
 
-  // DB info
   $servername = "localhost";
   $username = "root";
   $password = "";
   $dbname = "mydb";
-  
+
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
   // Check connection
   if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
   }
+
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['register_token'])) {
@@ -36,17 +36,14 @@
         $verify_results = dataQuery($verify_query, array($email));
 
         // if 0 is returned, that means no row in the table has that email
-        if ($verify_results == 0) {
+        if (count($verify_results) == 0) {
           // Insert into DB
           $query = 'INSERT INTO `users` (`firstName`, `lastName`, `email`, `password`, `gender`) VALUES (?,?,?,?,?)';
-          $params = array($first_name, $last_name, $email, $password, $gender);
+          $params = array($first_name, $last_name, $email, $pw, $gender);
           $results = dataQuery($query, $params);
 
-          header("Location: index.php");
+          header("Location: ../index.php");
         } else {
-          echo "<script type='text/javascript'>
-                  alert('Email already taken');
-                </script>";
           header("Location: ../registration.php?fail=true");
         }
       }
