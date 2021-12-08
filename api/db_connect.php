@@ -1,12 +1,4 @@
 <?php
-// NOTE TO TA: This was taken as a helper method from http://jayblanchard.net/proper_password_hashing_with_PHP.html
-
-/*
- * name:        PDO Connect & Query
- * author:      Jay Blanchard
- * date:        April 2015
- */
-
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -16,14 +8,13 @@ define('USER', 'root');
 define('PASS', 'root');
 
 
-
-function dataQuery($query, $params) {
+function dataQuery($query) {
     // what kind of query is this?
     $queryType = explode(' ', $query);
 
     // establish database connection
     try {
-        $dbh = new PDO('mysql:host=localhost;dbname=mydb', USER, PASS);
+        $dbh = new PDO('mysql:host=localhost;dbname=myDB', USER, PASS);
         $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
@@ -35,13 +26,14 @@ function dataQuery($query, $params) {
     // run query
     try {
         $queryResults = $dbh->prepare($query);
-        $queryResults->execute($params);
+        $queryResults->execute();
+        // return $queryResults
         if($queryResults != null && 'SELECT' == $queryType[0]) {
             $results = $queryResults->fetchAll(PDO::FETCH_ASSOC);
             return $results;
         } else {
             return $queryResults->rowCount();
-        }
+        // }
         $queryResults = null; // first of the two steps to properly close
         $dbh = null; // second step tp close the connection
     }
