@@ -3,8 +3,10 @@
 server with default setting (user 'root' with no password) */
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "mydb";
+$password = "root";
+$dbname = "myDB";
+// $password = "";
+// $dbname = "mydb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -27,7 +29,9 @@ $sql = "DROP TABLE IF EXISTS Reviews CASCADE;
             userId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
             firstName VARCHAR(30) NOT NULL,
             lastName VARCHAR(30) NOT NULL,
-            email VARCHAR(70) NOT NULL UNIQUE
+            email VARCHAR(70) NOT NULL UNIQUE,
+            password VARCHAR(70) NOT NULL,
+            gender VARCHAR(30)
         );
         CREATE TABLE Reviews (
             reviewId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -39,21 +43,10 @@ $sql = "DROP TABLE IF EXISTS Reviews CASCADE;
             FOREIGN KEY (userId) REFERENCES Users(userId),
             FOREIGN KEY (objectId) REFERENCES Objects(objectId)
         );
-        INSERT INTO Objects(objectName, latitude, longitude) VALUES (\"McMaster\", 43.257998968, -79.917996328);
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"DREW\", \"HIGGINS\", \"dhiggins@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"VINCE\", \"LEUNG\", \"leungv@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"PAUL\", \"HEEREMA\", \"heeremp@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"JAMES\", \"LEACH\", \"leach@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"GEORGIOS\", \"BALOMENOS\", \"balomeng@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"MOHAMED\", \"HUSSEIN\", \"husseinmo@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"MOATAZ\", \"MOHAMED\", \"mmohame@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"YOUNGGY\", \"KIM\", \"younggy@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"YIPING\", \"GUO\", \"guoy@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"ANDREE\", \"WIEBE\", \"wiebel@mcmaster.ca\");
-        INSERT INTO Users(firstName, lastName, email) VALUES (\"NICOLA\", \"NICOLICI\", \"nicola@ece.mcmaster.ca\");
-        INSERT INTO Reviews(rating, review, media, userId, objectId) VALUES (5, \"good\", \"\", (SELECT userId FROM Users WHERE email = \"dhiggins@mcmaster.ca\"), (SELECT ObjectId FROM Objects WHERE objectName ='McMaster'));
-        INSERT INTO Reviews(rating, review, media, userId, objectId) VALUES (5, \"good\", \"\", (SELECT userId FROM Users WHERE email = \"leungv@mcmaster.ca\"), (SELECT ObjectId FROM Objects WHERE objectName ='McMaster'));
-        INSERT INTO Reviews(rating, review, media, userId, objectId) VALUES (5, \"good\", \"\", (SELECT userId FROM Users WHERE email = \"heeremp@mcmaster.ca\"), (SELECT ObjectId FROM Objects WHERE objectName ='McMaster'));
+        INSERT INTO Objects(objectName, latitude, longitude) VALUES ('McMaster', 43.257998968, -79.917996328);
+        INSERT INTO Users(firstName, lastName, email, password) VALUES ('DREW', 'HIGGINS', 'dhiggins@mcmaster.ca', '1234115111');
+        INSERT INTO Users(firstName, lastName, email, password) VALUES ('VINCE', 'LEUNG', 'leungv@mcmaster.ca', '1234111115');
+        INSERT INTO Reviews(rating, review, media, userId, objectId) VALUES (5, 'good', '', (SELECT userId FROM Users WHERE email = 'dhiggins@mcmaster.ca'), (SELECT ObjectId FROM Objects WHERE objectName ='McMaster'));
 ";
 
 if ($conn->multi_query($sql) === TRUE) {
