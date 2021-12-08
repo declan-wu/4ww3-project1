@@ -16,7 +16,7 @@
   <?php include ("./includes/header.php")?>
 
   <!-- Container with form groups for logging in -->
-  <div class="container" id="registration-page">
+  <div class="container mt-4 mb-4" id="registration-page">
 
     <!-- Display error message if login failed -->
     <?php
@@ -41,7 +41,7 @@
 
       <!-- Submit button to login -->
       <input type="hidden" name="login_token" value="logintokentest1"/>
-      <button type="submit" value="Login" class="btn btn-primary">Login</button>
+      <button type="submit" value="Login" class="btn btn-primary mt-2">Login</button>
 
     </form>
 

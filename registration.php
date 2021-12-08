@@ -16,7 +16,7 @@
   <?php include ("./includes/header.php")?>
 
   <!-- Container with form groups for registering -->
-  <div class="container" id="registration-page">
+  <div class="container mt-4 mb-4" id="registration-page">
     
     <!-- Display error message if registration failed earlier -->
     <?php
@@ -62,6 +62,7 @@
       </div>
 
       <div class="row">
+       </br>
         <p>By creating an account you agree to our <a href="#">Terms of Service & Privacy Policy</a></p>
       </div>
 
@@ -77,7 +78,7 @@
 
       <!-- Submit button to register -->
       <input type="hidden" name="register_token" value="registertokentest1"/>
-      <button type="submit" value="Register" class="btn btn-primary">Register</button>
+      <button type="submit" value="Register" class="btn btn-primary mt-2">Register</button>
 
     </form>
   </div>
