@@ -25,44 +25,50 @@
           echo "<h4 style='margin-top:0.5cm; color: red'> Error submitting restaurant, please try again.</h3>";
         }
       }
-    ?>
 
-    <form method="post" action="php_helpers/submit_object.php" enctype="multipart/form-data">
-      <h1>Submit New Restaurant.</h1>
-      <div class="form-group">
-        <label for="object-name" class="form-label">Restaurant Name:</label>
-        <input type="text" class="form-control" placeholder="Object name" name="object-name" id="object-name" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="object-description" class="form-label">Description:</label>
-        <input type="text" class="form-control" placeholder="Description" name="object-description" id="object-description" required>
-      </div>
-
-      <div class="form-group">
-        <label for="object-lat" class="form-label">Latitude:</label>
-        <input type="number" min="-90" max="90" step="any" class="form-control" placeholder="Latitude" name="object-lat" id="object-lat" required>
-      </div>
-    
-      <div class="form-group">
-        <label for="object-long" class="form-label">Longitude:</label>
-        <input type="number" min="-180" max="180" step="any" class="form-control" placeholder="Longitude" name="object-long" id="object-long" required>
-      </div>
+      if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+        ?>
+        <form method="post" action="php_helpers/submit_object.php" enctype="multipart/form-data">
+          <h1>Submit New Restaurant.</h1>
+          <div class="form-group">
+            <label for="object-name" class="form-label">Restaurant Name:</label>
+            <input type="text" class="form-control" placeholder="Object name" name="object-name" id="object-name" required>
+          </div>
       
-      <button type="button" class="btn btn-primary" onclick="getLocation()">Use current location</button>
+          <div class="form-group">
+            <label for="object-description" class="form-label">Description:</label>
+            <input type="text" class="form-control" placeholder="Description" name="object-description" id="object-description" required>
+          </div>
     
-      <div class="form-group">
-        <label for="object-picture" class="form-label">Upload image:</label>
-        <input type="file" class="form-control" name="object-picture" id="object-picture" accept="image/*">
-      </div>
-
-      <div class="form-group">
-        <label for="object-picture" class="form-label">Upload video:</label>
-        <input type="file" class="form-control" name="object-video" id="object-video" accept="video/*">
-      </div>
+          <div class="form-group">
+            <label for="object-lat" class="form-label">Latitude:</label>
+            <input type="number" min="-90" max="90" step="any" class="form-control" placeholder="Latitude" name="object-lat" id="object-lat" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="object-long" class="form-label">Longitude:</label>
+            <input type="number" min="-180" max="180" step="any" class="form-control" placeholder="Longitude" name="object-long" id="object-long" required>
+          </div>
+          
+          <button type="button" class="btn btn-primary" onclick="getLocation()">Use current location</button>
+        
+          <div class="form-group">
+            <label for="object-picture" class="form-label">Upload image:</label>
+            <input type="file" class="form-control" name="object-picture" id="object-picture" accept="image/*">
+          </div>
     
-      <button type="submit" class="btn btn-primary mt-2">Submit new restaurant</button>
-    </form>
+          <div class="form-group">
+            <label for="object-picture" class="form-label">Upload video:</label>
+            <input type="file" class="form-control" name="object-video" id="object-video" accept="video/*">
+          </div>
+        
+          <button type="submit" class="btn btn-primary mt-2">Submit new restaurant</button>
+        </form>
+    <?php
+      } else {
+        echo "<h3 style='margin-top:0.5cm; margin-bottom:50%; color:red'>You must be logged in to submit an object!</h3>";
+      }
+    ?>
   </div>
 
   <!-- Footer Include -->

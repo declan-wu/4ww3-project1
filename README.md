@@ -46,3 +46,6 @@ iii. It is a relatively new feature so it's possible that some browsers do not y
 - https://winscp.net/eng/docs/guide_amazon_ec2
 - https://www.tutsmake.com/how-to-install-phpmyadmin-amazon-ec2-ubuntu/
 - https://www.tutsmake.com/upload-file-to-aws-s3-bucket-in-php/
+- https://stackoverflow.com/questions/10456113/check-file-extension-in-upload-form-in-php
+- https://serverfault.com/questions/151328/setting-apache2-path-environment-variable
+
