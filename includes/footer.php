@@ -19,8 +19,7 @@
       </div>
       <div class="col-md-6 item text">
         <h3>Company Name</h3>
-        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
-          elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+        <p>4WW3 Project, Fall 2021. Group members: Jennifer Cheng, Song Tao (Declan) Wu.</p>
       </div>
 
       <p class="copyright">© 2021 Restaurant Finder, All rights reserved.</p>

@@ -16,7 +16,7 @@
   <?php include ("./includes/header.php")?>
   <div class="container" id="welcomeMsg" style="margin-bottom:50%; margin-top:1cm">
     <h1>Welcome to Restaurant Finder.</h1>
-    <p>Created by: Jennifer Cheng, Declan Wu for 4WW3</p>
+    <p>Created by: Jennifer Cheng, Song Tao (Declan) Wu for 4WW3, Fall 2021</p>
     <p>SPACE UNDERNEATH IS LEFT INTENTIONALLY BLANK</p>
   </div>
 

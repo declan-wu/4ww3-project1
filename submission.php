@@ -26,6 +26,7 @@
         }
       }
 
+      // Check that user is logged in before showing the submission form
       if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
         ?>
         <form method="post" action="php_helpers/submit_object.php" enctype="multipart/form-data">
@@ -65,6 +66,7 @@
           <button type="submit" class="btn btn-primary mt-2">Submit new restaurant</button>
         </form>
     <?php
+    // Print error message if not logged in
       } else {
         echo "<h3 style='margin-top:0.5cm; margin-bottom:50%; color:red'>You must be logged in to submit an object!</h3>";
       }
