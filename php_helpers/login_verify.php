@@ -21,7 +21,7 @@
         // If password is correct, set up session
         if (password_verify($_POST['password'], $hash)) {
           $_SESSION['userId'] = $results[0]['userId'];
-          $_SESSION['name'] = $results[0]['firstName'];
+          $_SESSION['userName'] = $results[0]['firstName'];
           $_SESSION['loggedIn'] = true; // session status updated since user logged in successfully
           header('location: ../index.php');
         } else {

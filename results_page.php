@@ -2,21 +2,21 @@
   session_start();
 
   include './php_helpers/pdo_connect.php';
-  
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $query = '';
     $params = '';
-    if (isset($_POST['search-name'])) {
+    if (isset($_GET['search-name'])) {
       $query = "SELECT * FROM `objects` WHERE objectName LIKE ?";
-      $params = array($_POST['search-name']);
-    } else if (isset($_POST['search-rating'])) {
+      $params = array('%'.$_GET['search-name'].'%');
+    } else if (isset($_GET['search-rating'])) {
       // todo search by rating
-      $query = "SELECT * FROM `objects` WHERE objectName LIKE ?";
-      $params = array($_POST['search-name']);
+      $query = "SELECT * FROM `objects` WHERE objectName LIKE %?%";
+      $params = array($_GET['search-name']);
     } else {
       // todo search by location
-      $query = "SELECT * FROM `objects` WHERE objectName LIKE ?";
-      $params = array($_POST['search-name']);
+      $query = "SELECT * FROM `objects` WHERE objectName LIKE %?%";
+      $params = array($_GET['search-name']);
     }
     // Make query
     $results = dataQuery($query, $params);
@@ -36,26 +36,26 @@
   <!-- Header Include -->
   <?php include ("./includes/header.php")?>
 
-  <!-- <img src="./map.jpg" class="rounded mx-auto d-block" alt="Map of Individual Object" style="max-width:80%; max-height:50%; margin-top: 1%;"> -->
   <div id="map"></div>
 
   <!-- Container to display individual objects -->
   <div class="container">
     <div class="row">
+      <!-- For each search result, create a new box containing object name+description -->
       <?php if (count($results) > 0) {
-        foreach ($results as $row) {
-          echo $row['objectName'];
+        foreach ($results as $row) { ?>
+        <div class="col card">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $row['objectName'];?></h5>
+            <p class="card-text"><?php echo $row['description'];?></p>
+            <!-- Go to detailed object page -->
+            <a href="./individual_object.php" class="btn btn-primary">Go to object page!</a>
+          </div>
+        </div>
+        <?php 
         }
       }
       ?>
-      <div class="col card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Individual Object</h5>
-          <p class="card-text">Some quick description.</p>
-          <!-- Go to individual object page (currently hardcoded) -->
-          <a href="./individual_object.php" class="btn btn-primary">Go to object page!</a>
-        </div>
-      </div>
     </div>
   </div>
 
