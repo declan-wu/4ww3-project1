@@ -21,16 +21,23 @@
         <li class="nav-item">
           <a class="nav-link" href="./submission.php">Submit New Object</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./login.php">Log In</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./registration.php">Register</a>
-        </li>
+        
+        <!-- Show user's name if they are logged in, else display login buttons -->
+        <?php if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) { ?>
+          <li class="nav-item nav-link" style='color: white;'>Welcome back, <?php echo $_SESSION['userName']?>!</li>
+        <?php } else { ?>
+          <li class="nav-item">
+            <a class="nav-link" href="./login.php">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./registration.php">Register</a>
+          </li>
+        <?php } ?>
+        
       </ul>
       <form class="form-inline pull-right" action="results_page.php">
         <div class="input-group">
-          <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search by Name" id="search-name" name="search-name" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </div>
         <div class="input-group">
