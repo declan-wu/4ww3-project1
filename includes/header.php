@@ -16,16 +16,16 @@
           <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./registration.php">Register</a>
+        <a class="nav-link active" aria-current="page" href="./about.php">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./submission.php">Submit New Object</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Map</a>
+          <a class="nav-link" href="./login.php">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./registration.php">Register</a>
         </li>
       </ul>
       <form class="form-inline pull-right" action="results_page.php">

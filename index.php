@@ -11,6 +11,7 @@
 
   <!-- Header Include -->
   <?php include ("./includes/header.php")?>
+  <?php include ('create_tables.php');?>
 
   <!-- Background for search display -->
   <div class="bg-image" style="background-image: url('./assets/food.jpg'); height:100vh">

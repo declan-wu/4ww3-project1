@@ -20,6 +20,11 @@
       <h1>Register your account.</h1>
       <!-- Form group to put the label and input field together -->
       <div class="form-group">
+        <label for="userid">User ID:</label>
+        <input type="text" class="form-control" name="userid" id="userid">
+      </div>
+
+      <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" name="email" id="email">
       </div>

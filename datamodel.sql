@@ -1,6 +1,22 @@
-CREATE TABLE `individual_object`.`individual_object` ( `object_id` INT NOT NULL AUTO_INCREMENT , `object_name` VARCHAR(32) NOT NULL , `latitude` FLOAT NOT NULL , `longitude` FLOAT NOT NULL , PRIMARY KEY (`object_id`)) ENGINE = InnoDB;
-
-CREATE TABLE `reviews`.`reviews` ( `object_id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `rating` INT NOT NULL , `review` TEXT NOT NULL , `media` VARCHAR(2083) NOT NULL , PRIMARY KEY (`object_id`)) ENGINE = InnoDB;
-ALTER TABLE `reviews` ADD FOREIGN KEY (`object_id`) REFERENCES `individual_object`.`individual_object`(`object_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
-CREATE TABLE `users`.`users` ( `user_id` INT NOT NULL AUTO_INCREMENT , `email` VARCHAR(50) NOT NULL , `name` VARCHAR(70) NOT NULL , PRIMARY KEY (`user_id`)) ENGINE = InnoDB;
+CREATE TABLE Objects (
+    objectId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    objectName VARCHAR(100) UNIQUE,
+    latitude DECIMAL(12,10) NOT NULL, 
+    longitude DECIMAL(12,10) NOT NULL
+);
+CREATE TABLE Users (
+    userId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    firstName VARCHAR(30) NOT NULL,
+    lastName VARCHAR(30) NOT NULL,
+    email VARCHAR(70) NOT NULL UNIQUE
+);
+CREATE TABLE Reviews (
+    reviewId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    rating INT NOT NULL,
+    review VARCHAR(100),
+    media VARCHAR(500),
+    userId INT,
+    objectId INT,
+    FOREIGN KEY (userId) REFERENCES Users(userId),
+    FOREIGN KEY (objectId) REFERENCES Objects(objectId)
+);
