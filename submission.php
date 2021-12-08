@@ -1,9 +1,7 @@
 <html>
 <head>
   <title>Submit new object</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <?php include("./includes/head.php")?>
   <script type="text/javascript" src="./js/submission_location_helper.js"></script>
 </head>
 

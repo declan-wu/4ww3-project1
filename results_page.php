@@ -1,10 +1,8 @@
 <html>
 
 <head>
-  <title>Home Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <title>Results</title>
+  <?php include("./includes/head.php")?>
   <script type="text/javascript" src="./js/map_functions.js"></script>
 </head>
 

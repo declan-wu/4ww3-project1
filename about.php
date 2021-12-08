@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Home Page</title>
+  <title>About</title>
   <?php include("./includes/head.php")?>
   <script type="text/javascript" src="js/search.js"></script>
 </head>
@@ -11,9 +11,11 @@
 
   <!-- Header Include -->
   <?php include ("./includes/header.php")?>
-  
-  <h1>Welcome to Restaurant Finder.</h1>
-  <p>Created by: Jennifer Cheng, Declan Wu for 4WW3</p>
+  <div class="container" id="welcomeMsg" style="margin-bottom:50%; margin-top:2cm">
+    <h1>Welcome to Restaurant Finder.</h1>
+    <p>Created by: Jennifer Cheng, Declan Wu for 4WW3</p>
+    <p>SPACE UNDERNEATH IS LEFT INTENTIONALLY BLANK</p>
+  </div>
 
   <!-- Footer Include -->
   <div class="footer-dark">
