@@ -23,31 +23,29 @@
     } else {
       $query = "SELECT objectId, objectName, description, (
         3959 * acos(
-            cos(radians(78.3232)) *
-            cos(radians(?)) *
-            cos(radians(?) - radians(65.3234)) +
-            sin(radians(78.3232)) *
-            sin(radians(?))
+          cos(radians(?)) *
+          cos(radians(latitude)) *
+          cos(radians(longitude) - radians(?)) +
+          sin(radians(?)) *
+          sin(radians(latitude))
         )
       ) AS distance
-      FROM Objects
+      FROM objects
       HAVING distance < 30
       ORDER BY distance
       LIMIT 0, 20";
-      echo $_GET['lat'];
-      echo $_GET['long'];
       $params = array($_GET['lat'], $_GET['long'], $_GET['lat']);
     }
     // Make query
     $results = dataQuery($query, $params);
 
     // If no results are found, send the user back to the search page (index.php)
-    // if (count($results) == 0) {
-    //   echo '<script>
-    //     alert("No results found!");
-    //     window.location.href="index.php";
-    //   </script>';
-    // }
+    if (count($results) == 0) {
+      echo '<script>
+        alert("No results found!");
+        window.location.href="index.php";
+      </script>';
+    }
   }
 ?>
 <html>

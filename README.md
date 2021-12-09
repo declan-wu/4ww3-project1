@@ -47,8 +47,8 @@ iii. It is a relatively new feature so it's possible that some browsers do not y
 # Part 3
 ## Notes:
 - Features that we know aren't working:
-    - Search by location on map
-    - Dynamically put marker on map for search page
+    - Dynamically put marker on map for search page (just centers on Toronto right now)
+    - Updating average rating
 ## Resources:
 - https://stackoverflow.com/questions/219569/best-database-field-type-for-a-url
 - http://jayblanchard.net/proper_password_hashing_with_PHP.html
