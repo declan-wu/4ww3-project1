@@ -3,6 +3,12 @@
 Jennifer Cheng - 400118301 - chengj43
 Song Tao (Declan) Wu - 400132033 - wus92
 
+# NEW FOR PART 3 - NOTES TO MARKER
+**You must access the https server or else Google Maps API will not work**: Please go to here https://3.23.48.49/index.html
+
+
+
+
 # NEW FOR PART 2 - NOTES TO MARKER
 **You must access the https server or else Google Maps API will not work**: Please go to here https://3.23.48.49/index.html
 
