@@ -22,7 +22,6 @@
 <head>
   <title>Individual Object Page</title>
   <?php include("./includes/head.php")?>
-  <script type="text/javascript" src="js/map_functions.js"></script>
 </head>
 
 <body>
@@ -36,7 +35,22 @@
     <h1 class="center"> 
       <?php echo $results[0]['objectName']?> 
     </h1>
-    <!-- TODO: Dynamic map location -->
+    <!-- Map Script -->
+    <script type="text/javascript">
+      function initMapIndividual() {
+        // Initialize our Google map
+        map = new google.maps.Map(document.getElementById("map"), {
+          // Location of our map
+          center: { lat: <?php echo $results[0]['latitude'] ?>, lng: <?php echo $results[0]['longitude'] ?> },
+          zoom: 14,
+        });
+        const marker = new google.maps.Marker({
+          position: { lat: <?php echo $results[0]['latitude'] ?>, lng: <?php echo $results[0]['longitude'] ?> },
+          map,
+          title: "<?php echo $results[0]['objectName'] ?>"
+        });
+      }
+    </script>
     <div id="map"></div>
   </div>
 
@@ -108,6 +122,50 @@
       }
     }
     ?>
+    <!-- Accordion/toggle menu to submit a review -->
+      <a class="btn btn-primary" data-toggle="collapse" href="#submit-review-collapse" role="button" aria-expanded="false" aria-controls="#submit-review-collapse">
+        Submit your review
+      </a>
+      <div class="collapse" id="submit-review-collapse">
+        <div class="card card-body">
+          <!-- Check that user is logged in -->
+          <?php 
+          if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+          ?>
+          <form onsubmit="return validate(this)" method="post" action="./php_helpers/submit_review.php">
+            <h1>Submit a Review</h1>
+            <!-- Form group to put the label and input field together -->
+            <div class="form-group">
+              <label for="rating">Rating:</label>
+              <div class="input-group">
+                <select name="submit-rating" id="submit-rating">
+                  <option value="" disabled selected>Select Rating</option>
+                  <option value="1">1/5</option>
+                  <option value="2">2/5</option>
+                  <option value="3">3/5</option>
+                  <option value="4">4/5</option>
+                  <option value="5">5/5</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="review-description">Review:</label>
+              <textarea class="form-control" name="review-description" id="review-description" rows="4" cols="200"></textarea>
+            </div>
+            <!-- Submit review with objectID and userID -->
+            <input type="hidden" id="review-userid" name="review-userid" value=<?php echo $_SESSION['userId']?>/>
+            <input type="hidden" id="review-objectid" name="review-objectid" value=<?php echo $results[0]['objectId']?>/>
+            <button type="submit" value="submit-review" class="btn btn-primary mt-2">Submit</button>
+          <?php 
+          // If user isn't logged in, print out error msg
+          } else {
+            echo "<h3 style='margin-top:0.5cm; color:red'>You must be logged in to submit a review!</h3>";
+          }
+          ?>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -116,6 +174,7 @@
     <?php include ("./includes/footer.php")?>
   </div>
 
+  <!-- Call our map script -->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiwTW59OFo0h7OKrnOrfRIfKHO2S3kQtY&callback=initMapIndividual"
     async></script>
