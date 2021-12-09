@@ -48,8 +48,8 @@
           <div class="card-body">
             <h5 class="card-title"><?php echo $row['objectName'];?></h5>
             <p class="card-text"><?php echo $row['description'];?></p>
-            <!-- Go to detailed object page -->
-            <a href="./individual_object.php" class="btn btn-primary">Go to object page!</a>
+            <!-- Go to detailed object page, dynamic based on objectId -->
+            <a href="./individual_object_page.php?objectId=<?php echo $row['objectId'];?>" class="btn btn-primary">Go to object page!</a>
           </div>
         </div>
         <?php 
