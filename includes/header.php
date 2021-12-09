@@ -37,7 +37,7 @@
       </ul>
       <form class="form-inline pull-right" action="results_page.php">
         <div class="input-group">
-          <input class="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search">
+          <input class="form-control me-2" name="search-name" id="search-name" type="search" placeholder="Search by Name" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </div>
         <div class="input-group">
