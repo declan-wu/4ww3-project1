@@ -49,6 +49,12 @@ iii. It is a relatively new feature so it's possible that some browsers do not y
 - Features that we know aren't working:
     - Dynamically put marker on map for search page (just centers on Toronto right now)
     - Updating average rating
+- Things you can test
+    - Login using "test@test.com" and password "testtest"
+    - Try registering with that email (it will give an error)
+    - To test search by location:
+        - Search for "Far Away Restaurant" to see a restaurant far away
+        - Then search nearest (assuming you are in Hamilton/nearby) some restaurants will show up
 ## Resources:
 - https://stackoverflow.com/questions/219569/best-database-field-type-for-a-url
 - http://jayblanchard.net/proper_password_hashing_with_PHP.html
