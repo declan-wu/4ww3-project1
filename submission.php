@@ -20,7 +20,7 @@
       if (isset($_GET['success'])) {
         $success = $_GET['success'];
         if ($success == "true") {
-          echo "<h4 style='margin-top:0.5cm; color: red'> Success! Restaurant has been submitted.</h3>";
+          echo "<h4 style='margin-top:0.5cm; color: green'> Success! Restaurant has been submitted.</h3>";
         } else {
           echo "<h4 style='margin-top:0.5cm; color: red'> Error submitting restaurant, please try again.</h3>";
         }

@@ -24,9 +24,9 @@
           $params = array($first_name, $last_name, $email, $pw, $gender);
           $results = dataQuery($query, $params);
 
-          header("Location: ../index.php");
+          header("Location: ../registration.php?success=true");
         } else {
-          header("Location: ../registration.php?fail=true");
+          header("Location: ../registration.php?success=false");
         }
       }
     }
