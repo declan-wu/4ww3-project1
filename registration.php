@@ -20,10 +20,10 @@
     
     <!-- Display error message if registration failed earlier -->
     <?php
-      $success = (isset($_GET['success']));
+      $success = $_GET['success'];
       if ($success == "true") {
         echo "<h4 style='margin-top:1cm; color: green'> Registered successfully.</h3>";
-      } else {
+      } else if ($success == "false") {
         echo "<h4 style='margin-top:1cm; color: red'> User with email already found. Please login or use a different email.</h3>";
       }
     ?>

@@ -14,7 +14,7 @@
 
   <!-- Header Include -->
   <?php include ("./includes/header.php")?>
-
+  
   <!-- Background for search display -->
   <div class="bg-image" style="background-image: url('./assets/food.jpg'); height:100vh">
     <!-- Mask the background so the search bar is easier to see -->
