@@ -56,9 +56,9 @@
     }
   ?>
  
-  <!-- If there is a picture, put the picture on the page -->
+  <!-- If there is a video, put the video on the page -->
   <?php 
-    if (strlen($results[0]['pictureUrl']) > 0) {
+    if (strlen($results[0]['videoUrl']) > 0) {
   ?>
     <!-- Add video on object page -->
     <div class="container center-video">
