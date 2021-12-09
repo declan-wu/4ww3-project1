@@ -22,7 +22,10 @@ $sql = "DROP TABLE IF EXISTS reviews CASCADE;
             objectName VARCHAR(100) UNIQUE,
             latitude DECIMAL(12,10) NOT NULL, 
             longitude DECIMAL(12,10) NOT NULL,
-            rating INT
+            rating INT,
+            description VARCHAR(255),
+            pictureUrl VARCHAR(100),
+            videoUrl VARCHAR(100)
         );
         CREATE TABLE users (
             userId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
