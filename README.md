@@ -45,7 +45,11 @@ ii.
 iii. It is a relatively new feature so it's possible that some browsers do not yet support it. This is mitigated by using the `<img>` tag inside of the `<picture>` tag so it will always be backwards compatible.
 
 # Part 3
-## Notes and resources:
+## Notes:
+- Features that we know aren't working:
+    - Search by location on map
+    - Dynamically put marker on map for search page
+## Resources:
 - https://stackoverflow.com/questions/219569/best-database-field-type-for-a-url
 - http://jayblanchard.net/proper_password_hashing_with_PHP.html
 - https://stackoverflow.com/questions/36893238/simple-sql-query-selecting-from-table-where-email-email
